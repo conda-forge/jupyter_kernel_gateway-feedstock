@@ -11,6 +11,18 @@ Summary: Jupyter Kernel Gateway
 
 
 
+Current build status
+====================
+
+Linux: [![Circle CI](https://circleci.com/gh/conda-forge/jupyter_kernel_gateway-feedstock.svg?style=shield)](https://circleci.com/gh/conda-forge/jupyter_kernel_gateway-feedstock)
+OSX: [![TravisCI](https://travis-ci.org/conda-forge/jupyter_kernel_gateway-feedstock.svg?branch=master)](https://travis-ci.org/conda-forge/jupyter_kernel_gateway-feedstock)
+Windows: [![AppVeyor](https://ci.appveyor.com/api/projects/status/github/conda-forge/jupyter_kernel_gateway-feedstock?svg=True)](https://ci.appveyor.com/project/conda-forge/jupyter-kernel-gateway-feedstock/branch/master)
+
+Current release info
+====================
+Version: [![Anaconda-Server Badge](https://anaconda.org/conda-forge/jupyter_kernel_gateway/badges/version.svg)](https://anaconda.org/conda-forge/jupyter_kernel_gateway)
+Downloads: [![Anaconda-Server Badge](https://anaconda.org/conda-forge/jupyter_kernel_gateway/badges/downloads.svg)](https://anaconda.org/conda-forge/jupyter_kernel_gateway)
+
 Installing jupyter_kernel_gateway
 =================================
 
@@ -31,7 +43,6 @@ It is possible to list all of the versions of `jupyter_kernel_gateway` available
 ```
 conda search jupyter_kernel_gateway --channel conda-forge
 ```
-
 
 
 About conda-forge
@@ -67,18 +78,6 @@ Terminology
 
 **conda-forge** - the place where the feedstock and smithy live and work to
                   produce the finished article (built conda distributions)
-
-Current build status
-====================
-
-Linux: [![Circle CI](https://circleci.com/gh/conda-forge/jupyter_kernel_gateway-feedstock.svg?style=shield)](https://circleci.com/gh/conda-forge/jupyter_kernel_gateway-feedstock)
-OSX: [![TravisCI](https://travis-ci.org/conda-forge/jupyter_kernel_gateway-feedstock.svg?branch=master)](https://travis-ci.org/conda-forge/jupyter_kernel_gateway-feedstock)
-Windows: [![AppVeyor](https://ci.appveyor.com/api/projects/status/github/conda-forge/jupyter_kernel_gateway-feedstock?svg=True)](https://ci.appveyor.com/project/conda-forge/jupyter-kernel-gateway-feedstock/branch/master)
-
-Current release info
-====================
-Version: [![Anaconda-Server Badge](https://anaconda.org/conda-forge/jupyter_kernel_gateway/badges/version.svg)](https://anaconda.org/conda-forge/jupyter_kernel_gateway)
-Downloads: [![Anaconda-Server Badge](https://anaconda.org/conda-forge/jupyter_kernel_gateway/badges/downloads.svg)](https://anaconda.org/conda-forge/jupyter_kernel_gateway)
 
 
 Updating jupyter_kernel_gateway-feedstock
