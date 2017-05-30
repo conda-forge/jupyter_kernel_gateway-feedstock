@@ -1,5 +1,5 @@
-{% set version = "1.2.0" %}
-{% set sha256 = "09f2fac69a5d71a055dadaec622718188c378a5e6bdb418daa5f83532f6aa021" %}
+{% set version = "2.0.0" %}
+{% set sha256 = "fb0cd6f39ae87084db7ffb8547eb24d6d106f1df9c0b95d69642cea53bee16c0" %}
 
 package:
   name: jupyter_kernel_gateway
@@ -24,7 +24,7 @@ requirements:
     - python
     - jupyter_client >=4.2.0
     - jupyter_core >=4.0
-    - notebook >=4.1.0
+    - notebook >=5.0.0
     - traitlets >=4.2.0
     - requests >=2.7
     - tornado >=4.2.0
@@ -38,7 +38,6 @@ test:
     - kernel_gateway.notebook_http.cell
     - kernel_gateway.notebook_http.swagger
     - kernel_gateway.services
-    - kernel_gateway.services.activity
     - kernel_gateway.services.kernels
     - kernel_gateway.services.kernelspecs
     - kernel_gateway.services.sessions
@@ -47,7 +46,7 @@ test:
     - jupyter kernelgateway --help
 
 about:
-  home: http://github.com/jupyter-incubator/dashboards
+  home: http://github.com/jupyter/kernel_gateway
   license: BSD 3-Clause
   license_file: LICENSE.md
   summary: Jupyter Kernel Gateway
