@@ -1,7 +1,7 @@
 About jupyter_kernel_gateway
 ============================
 
-Home: http://github.com/jupyter-incubator/dashboards
+Home: http://github.com/jupyter/kernel_gateway
 
 Package license: BSD 3-Clause
 
@@ -14,9 +14,7 @@ Summary: Jupyter Kernel Gateway
 Current build status
 ====================
 
-Linux: [![Circle CI](https://circleci.com/gh/conda-forge/jupyter_kernel_gateway-feedstock.svg?style=shield)](https://circleci.com/gh/conda-forge/jupyter_kernel_gateway-feedstock)
-OSX: [![TravisCI](https://travis-ci.org/conda-forge/jupyter_kernel_gateway-feedstock.svg?branch=master)](https://travis-ci.org/conda-forge/jupyter_kernel_gateway-feedstock)
-Windows: [![AppVeyor](https://ci.appveyor.com/api/projects/status/github/conda-forge/jupyter_kernel_gateway-feedstock?svg=True)](https://ci.appveyor.com/project/conda-forge/jupyter-kernel-gateway-feedstock/branch/master)
+All platforms: [![Circle CI](https://circleci.com/gh/conda-forge/jupyter_kernel_gateway-feedstock.svg?style=shield)](https://circleci.com/gh/conda-forge/jupyter_kernel_gateway-feedstock)
 
 Current release info
 ====================
