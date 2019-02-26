@@ -1,5 +1,5 @@
-{% set version = "2.1.0" %}
-{% set sha256 = "7fb26c04e1cd16ddbf9184a4cb0b74e90031b72b48f1c659e22ecaa8b49a95ce" %}
+{% set version = "2.2.0" %}
+{% set sha256 = "6a5acc255d9070a8274d7e7dec72e0cc5fa93f5b85b3e835026d344cf87c91fb" %}
 
 package:
   name: jupyter_kernel_gateway
@@ -11,7 +11,7 @@ source:
   sha256: {{ sha256 }}
 
 build:
-  number: 1
+  number: 0
   noarch: python
   script: python setup.py install --single-version-externally-managed --record record.txt
   entry_points:
