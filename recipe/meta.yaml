@@ -1,5 +1,5 @@
-{% set version = "2.2.0" %}
-{% set sha256 = "6a5acc255d9070a8274d7e7dec72e0cc5fa93f5b85b3e835026d344cf87c91fb" %}
+{% set version = "2.3.0" %}
+{% set sha256 = "d84b345f1d64e2b83eec804538e20309cbda9346ed64ed5a94c430b97debd9cf" %}
 
 package:
   name: jupyter_kernel_gateway
