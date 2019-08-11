@@ -1,5 +1,5 @@
-{% set version = "2.3.0" %}
-{% set sha256 = "d84b345f1d64e2b83eec804538e20309cbda9346ed64ed5a94c430b97debd9cf" %}
+{% set version = "2.4.0" %}
+{% set sha256 = "dff74763ed6c6c7910906e5320505e4780204a169aae50d1767f5a6383ccb2be" %}
 
 package:
   name: jupyter_kernel_gateway
@@ -23,11 +23,11 @@ requirements:
     - setuptools
   run:
     - python
-    - jupyter_client >=4.2.0
-    - jupyter_core >=4.0
-    - notebook >=5.0.0
+    - jupyter_client >=5.2.0
+    - jupyter_core >=4.4.0
+    - notebook >=5.7.6,<7.0
     - traitlets >=4.2.0
-    - requests >=2.7
+    - requests >=2.7,<3.0
     - tornado >=4.2.0
 
 test:
