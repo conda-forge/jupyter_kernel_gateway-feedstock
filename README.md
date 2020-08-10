@@ -5,7 +5,7 @@ Home: http://github.com/jupyter/kernel_gateway
 
 Package license: BSD 3-Clause
 
-Feedstock license: BSD 3-Clause
+Feedstock license: BSD-3-Clause
 
 Summary: Jupyter Kernel Gateway
 
