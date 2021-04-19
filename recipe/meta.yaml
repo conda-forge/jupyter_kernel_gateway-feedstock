@@ -1,5 +1,5 @@
-{% set version = "2.4.3" %}
-{% set sha256 = "6424a9f118e757ef18e9bed7784ca05ad9e633945df328ac4d8810eadc6f6ccd" %}
+{% set version = "2.5.0" %}
+{% set sha256 = "4e7b3ae544ae058edaf4cce4c985800fb6143291c4e9ed215539fd87a8966931" %}
 
 package:
   name: jupyter_kernel_gateway
@@ -18,7 +18,7 @@ build:
     - jupyter-kernelgateway = kernel_gateway:launch_instance
 
 requirements:
-  build:
+  host:
     - python
     - setuptools
   run:
