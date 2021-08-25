@@ -11,7 +11,7 @@ source:
   sha256: {{ sha256 }}
 
 build:
-  number: 0
+  number: 1
   noarch: python
   script: python setup.py install --single-version-externally-managed --record record.txt
   entry_points:
@@ -19,12 +19,14 @@ build:
 
 requirements:
   host:
-    - python
+    - python >= 3.6.1
     - setuptools
   run:
-    - python
+    - python >= 3.6.1
+    - ipython_genutils
     - jupyter_client >=5.2.0
     - jupyter_core >=4.4.0
+    - nbformat
     - notebook >=5.7.6,<7.0
     - traitlets >=4.2.0
     - requests >=2.7,<3.0
