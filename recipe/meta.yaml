@@ -1,62 +1,69 @@
 {% set version = "3.0.0" %}
-{% set sha256 = "f6f52468a24900a19336125edc4d5ae39f0b15e595561f1200b7a1e71fea5494" %}
 
 package:
   name: jupyter_kernel_gateway
   version: {{ version }}
 
 source:
-  fn: jupyter-kernel-gateway-{{ version }}.tar.gz
   url: https://pypi.io/packages/source/j/jupyter_kernel_gateway/jupyter_kernel_gateway-{{ version }}.tar.gz
-  sha256: {{ sha256 }}
+  sha256: f6f52468a24900a19336125edc4d5ae39f0b15e595561f1200b7a1e71fea5494
 
 build:
   number: 0
   noarch: python
-  script: python setup.py install --single-version-externally-managed --record record.txt
+  script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
   entry_points:
     - jupyter-kernelgateway = kernel_gateway:launch_instance
 
 requirements:
   host:
-    - python >=3.7
-    - setuptools
+    - hatchling >=1.5
+    - pip
+    - python >=3.8
   run:
-    - python >=3.7
-    - jupyter_client >=5.2.0,<8.0
-    - jupyter_core >=4.4.0
-    - nbformat
-    - notebook >=5.7.6,<7.0
-    - traitlets >=4.2.0
-    - requests >=2.7,<3.0
-    - tornado >=4.2.0
+    - jupyter_client >=8.6
+    - jupyter_core >=5.7
+    - jupyter_server >=2.12
+    - python >=3.8
+    - requests >=2.31
+    - tornado >=6.4
+    - traitlets >=5.14.1
 
 test:
+  source_files:
+    - tests
+  requires:
+    - coverage
+    - ipykernel
+    - pip
+    - pytest
+    - pytest-jupyter
+    - pytest-timeout
   imports:
     - kernel_gateway
-    - kernel_gateway.base
-    - kernel_gateway.jupyter_websocket
-    - kernel_gateway.notebook_http
-    - kernel_gateway.notebook_http.cell
-    - kernel_gateway.notebook_http.swagger
-    - kernel_gateway.services
-    - kernel_gateway.services.kernels
-    - kernel_gateway.services.kernelspecs
-    - kernel_gateway.services.sessions
   commands:
-    - jupyter-kernelgateway --help
+    - pip check
+    - jupyter-kernelgateway --version
     - jupyter kernelgateway --help
+    - coverage run --source=kernel_gateway --branch -m pytest -vv --color=yes --tb=long -k "not concurrent_request_should_not_be_blocked"
+    - coverage report --show-missing --skip-covered --fail-under=90
 
 about:
   home: http://github.com/jupyter/kernel_gateway
-  license: BSD 3-Clause
+  license: BSD-3-Clause
   license_file: LICENSE.md
   summary: Jupyter Kernel Gateway
   doc_url: https://jupyter-kernel-gateway.readthedocs.io
   dev_url: https://github.com/jupyter/kernel_gateway
+  description: |-
+    Jupyter Kernel Gateway is a web server that provides headless access to Jupyter
+    kernels. Your application communicates with the kernels remotely, through REST
+    calls and Websockets rather than ZeroMQ messages. There are no provisions for
+    editing notebooks through the Kernel Gateway.
 
 extra:
   recipe-maintainers:
     - parente
     - lresende
     - kevin-bates
+    - bollwyvl
