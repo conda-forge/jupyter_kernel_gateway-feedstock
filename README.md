@@ -5,13 +5,18 @@ Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/jupyter_kernel_
 
 Home: http://github.com/jupyter/kernel_gateway
 
-Package license: BSD 3-Clause
+Package license: BSD-3-Clause
 
 Summary: Jupyter Kernel Gateway
 
 Development: https://github.com/jupyter/kernel_gateway
 
 Documentation: https://jupyter-kernel-gateway.readthedocs.io
+
+Jupyter Kernel Gateway is a web server that provides headless access to Jupyter
+kernels. Your application communicates with the kernels remotely, through REST
+calls and Websockets rather than ZeroMQ messages. There are no provisions for
+editing notebooks through the Kernel Gateway.
 
 Current build status
 ====================
@@ -147,6 +152,7 @@ In order to produce a uniquely identifiable distribution:
 Feedstock Maintainers
 =====================
 
+* [@bollwyvl](https://github.com/bollwyvl/)
 * [@kevin-bates](https://github.com/kevin-bates/)
 * [@lresende](https://github.com/lresende/)
 * [@parente](https://github.com/parente/)
