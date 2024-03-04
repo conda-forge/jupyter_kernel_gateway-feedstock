@@ -1,17 +1,22 @@
-About jupyter_kernel_gateway
-============================
+About jupyter_kernel_gateway-feedstock
+======================================
+
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/jupyter_kernel_gateway-feedstock/blob/main/LICENSE.txt)
 
 Home: http://github.com/jupyter/kernel_gateway
 
-Package license: BSD 3-Clause
-
-Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/jupyter_kernel_gateway-feedstock/blob/main/LICENSE.txt)
+Package license: BSD-3-Clause
 
 Summary: Jupyter Kernel Gateway
 
 Development: https://github.com/jupyter/kernel_gateway
 
 Documentation: https://jupyter-kernel-gateway.readthedocs.io
+
+Jupyter Kernel Gateway is a web server that provides headless access to Jupyter
+kernels. Your application communicates with the kernels remotely, through REST
+calls and Websockets rather than ZeroMQ messages. There are no provisions for
+editing notebooks through the Kernel Gateway.
 
 Current build status
 ====================
@@ -99,7 +104,7 @@ available continuous integration services. Thanks to the awesome service provide
 [CircleCI](https://circleci.com/), [AppVeyor](https://www.appveyor.com/),
 [Drone](https://cloud.drone.io/welcome), and [TravisCI](https://travis-ci.com/)
 it is possible to build and upload installable packages to the
-[conda-forge](https://anaconda.org/conda-forge) [Anaconda-Cloud](https://anaconda.org/)
+[conda-forge](https://anaconda.org/conda-forge) [anaconda.org](https://anaconda.org/)
 channel for Linux, Windows and OSX respectively.
 
 To manage the continuous integration and simplify feedstock maintenance
@@ -147,6 +152,7 @@ In order to produce a uniquely identifiable distribution:
 Feedstock Maintainers
 =====================
 
+* [@bollwyvl](https://github.com/bollwyvl/)
 * [@kevin-bates](https://github.com/kevin-bates/)
 * [@lresende](https://github.com/lresende/)
 * [@parente](https://github.com/parente/)
