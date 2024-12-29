@@ -158,5 +158,3 @@ Feedstock Maintainers
 * [@lresende](https://github.com/lresende/)
 * [@parente](https://github.com/parente/)
 
-<!-- trigger ci -->
-

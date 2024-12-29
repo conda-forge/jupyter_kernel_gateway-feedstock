@@ -5,11 +5,11 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/j/jupyter_kernel_gateway/jupyter_kernel_gateway-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/j/jupyter_kernel_gateway/jupyter_kernel_gateway-{{ version }}.tar.gz
   sha256: 900690c4c0e796867355468d685f7fa1cf3c7775d08e871c157f77d65fbd6d7f
 
 build:
-  number: 0
+  number: 1
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
   entry_points:
@@ -19,12 +19,12 @@ requirements:
   host:
     - hatchling >=1.5
     - pip
-    - python >=3.8
+    - python {{ python_min }}
   run:
     - jupyter_client >=8.6
     - jupyter_core >=5.7
     - jupyter_server >=2.12
-    - python >=3.8
+    - python >={{ python_min }}
     - requests >=2.31
     - tornado >=6.4
     - traitlets >=5.14.1
@@ -39,6 +39,7 @@ test:
     - pytest
     - pytest-jupyter
     - pytest-timeout
+    - python {{ python_min }}
   imports:
     - kernel_gateway
   commands:
